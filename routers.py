@@ -1,4 +1,4 @@
-from time import sleep, time
+# from time import sleep, time
 import requests
 from flask import jsonify, request
 from flask_cors import cross_origin
