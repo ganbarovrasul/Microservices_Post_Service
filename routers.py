@@ -19,7 +19,7 @@ def posts():
             'type': 'PostCreated',
             'data': new_blog
         }
-        requests.post('http://127.0.0.1:5003/events', json=post_data)
+        requests.post('https://microservices-eventbus-service.herokuapp.com/events', json=post_data)
         return jsonify(new_blog), 201
     # time.sleep(1)    
     blogs = get_blogs()
