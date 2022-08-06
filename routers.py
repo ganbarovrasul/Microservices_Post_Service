@@ -4,7 +4,7 @@ from flask import jsonify, request
 from flask_cors import cross_origin
 from repostories import create_blog, get_blogs
 from app import app
-import time
+# import time
 
 
 @app.route('/posts', methods = ['GET', "POST"])
@@ -21,7 +21,7 @@ def posts():
         }
         requests.post('http://127.0.0.1:5003/events', json=post_data)
         return jsonify(new_blog), 201
-    time.sleep(1)    
+    # time.sleep(1)    
     blogs = get_blogs()
     return jsonify(blogs)
 
